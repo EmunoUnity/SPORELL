@@ -121,7 +121,7 @@ public class EnemyNav : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.transform.tag == "Bullet")
+        /*if (col.transform.tag == "Bullet")
         {
             enemyLife -= 10;
             if (enemyLife <= 0)
@@ -135,7 +135,7 @@ public class EnemyNav : MonoBehaviour
                 enemyDamage = 0;
                 currentRandomPoint = 0;
             }
-        }
+        }*/
     }
 
     void walk()
