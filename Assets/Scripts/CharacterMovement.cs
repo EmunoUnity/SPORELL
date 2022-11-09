@@ -18,6 +18,8 @@ public class CharacterMovement : MonoBehaviour
 
     public bool isGrounded;
     Rigidbody rb;
+
+    
     // Start is called before the first frame update
     void Start()
     {
