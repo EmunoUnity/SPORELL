@@ -7,6 +7,7 @@ public class PLAYER : MonoBehaviour
     // Start is called before the first frame update
     public static float life = 100;
     public float testlife;
+
     void Start()
     {
         testlife = life;
@@ -16,5 +17,6 @@ public class PLAYER : MonoBehaviour
     void Update()
     {
         testlife = life;
+
     }
 }

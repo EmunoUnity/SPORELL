@@ -88,8 +88,10 @@ public class CharacterMovement : MonoBehaviour
             speed = 5.0f;
         }
 
+        transform.rotation = Quaternion.Euler(0, camera1.transform.eulerAngles.y, 0);
 
-        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, camera1.transform.localEulerAngles.y, transform.localEulerAngles.z);
+        //Made player do something with camera
+        //transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, camera1.transform.localEulerAngles.y, transform.localEulerAngles.z);
         /*if (staminabar.instance.cur >= 5)
         {
             if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
