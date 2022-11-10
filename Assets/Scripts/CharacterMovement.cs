@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    private float speed = 5.0f;
+    private float speed = 7.0f;
 
     public Camera camera1;
     private Vector3 moveDirection = Vector3.zero;
