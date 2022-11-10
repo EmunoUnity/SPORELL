@@ -1392,12 +1392,12 @@ MonoBehaviour:
   randomPoints:
   - {fileID: 124174621}
   currentRandomPoint: 1
-  perceptionDistance: 30
+  perceptionDistance: 15
   chaseDistance: 20
   attackDistance: 1
   walkVelocity: 2
-  chaseVelocity: 6
-  attackTime: 1
+  chaseVelocity: 5
+  attackTime: 1.5
   enemyDamage: 0.2
   seeingPlayer: 0
   enemyLife: 50

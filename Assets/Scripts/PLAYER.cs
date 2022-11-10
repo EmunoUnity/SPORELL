@@ -18,5 +18,10 @@ public class PLAYER : MonoBehaviour
     void Update()
     {
         HealthBar.SetHealthBarValue(life);
+
+        if(HealthBar.GetHealthBarValue() <= 0)
+        {
+            Debug.Log("Game Over!!!");
+        }
     }
 }

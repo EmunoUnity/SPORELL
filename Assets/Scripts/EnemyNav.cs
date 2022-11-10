@@ -16,7 +16,7 @@ public class EnemyNav : MonoBehaviour
     private bool chasing, chaseTime, attacking;
     private float chaseStopwatch, attackingStopwatch;
 
-    public float perceptionDistance = 30, chaseDistance = 20, attackDistance = 1, walkVelocity = 2, chaseVelocity = 6, attackTime = 1.5f, enemyDamage = 0.2f;
+    public float perceptionDistance = 30, chaseDistance = 20, attackDistance = 1, walkVelocity = 2, chaseVelocity = 5, attackTime = 1.5f, enemyDamage = 0.2f;
 
     public bool seeingPlayer;
     public float enemyLife;
