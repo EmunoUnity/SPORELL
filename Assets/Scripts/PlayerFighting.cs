@@ -8,6 +8,7 @@ public class PlayerFighting : MonoBehaviour
     public EnemyNav enemyNav;
 
     private Animation help;
+    
 
     public bool comboOne;
 
@@ -18,17 +19,20 @@ public class PlayerFighting : MonoBehaviour
 
         comboOne = false;
 
-        help = GetComponent<Animation>();
+        help = gameObject.GetComponent<Animation>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         //help.Play("SwingOne");
 
-        if(Input.GetKeyDown(KeyCode.Mouse0) && comboOne)
+        if(Input.GetKeyDown(KeyCode.Mouse0) && !comboOne)
         {
             help.Play("SwingOne");
+            comboOne = true;
         }
     }
 

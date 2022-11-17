@@ -1643,6 +1643,7 @@ GameObject:
   - component: {fileID: 1654129424}
   - component: {fileID: 1654129425}
   - component: {fileID: 1654129426}
+  - component: {fileID: 1654129427}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -1681,7 +1682,7 @@ Animation:
   - {fileID: 7400000, guid: 04165ddc19577cc49b76f91581f47c38, type: 2}
   - {fileID: 7400000, guid: 42eede5b1e98ce8428f8e28c0f0c6f32, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!114 &1654129426
@@ -1699,6 +1700,26 @@ MonoBehaviour:
   normaldamage: 100
   enemyNav: {fileID: 0}
   comboOne: 0
+--- !u!95 &1654129427
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654129423}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 09633a0bdc370f742a4a896fc48249c0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1896470615
 GameObject:
   m_ObjectHideFlags: 0
