@@ -11,6 +11,7 @@ public class PlayerFighting : MonoBehaviour
     
 
     public bool comboOne;
+    public bool comboTwo;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class PlayerFighting : MonoBehaviour
         //enemyNav = GetComponent<EnemyNav>();
 
         comboOne = false;
+        comboTwo = false;
 
         help = gameObject.GetComponent<Animation>();
         
@@ -29,15 +31,40 @@ public class PlayerFighting : MonoBehaviour
         
         //help.Play("SwingOne");
 
-        if(Input.GetKeyDown(KeyCode.Mouse0) && !comboOne)
+        if(Input.GetKeyDown(KeyCode.Mouse0))
         {
-            help.Play("SwingOne");
-            comboOne = true;
+            if (!comboOne && !comboTwo)
+            {
+                help.Play("SwingOne");
+                comboOne = true;
+                StartCoroutine(comboOnePause());
+            }
+            else if (comboOne && !comboTwo)
+            {
+                help.Play("SwingTwo");
+                comboTwo = true;
+                StartCoroutine(comboTwoPause());
+                
+            }
+            else if (comboTwo && comboOne)
+            {
+                help.Play("SwingThree");
+                comboOne = false;
+                comboTwo = false;
+            }
         }
+        
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public IEnumerator comboOnePause()
     {
-        
+        yield return new WaitForSeconds(1);
+        comboOne = false;
+    }
+
+    public IEnumerator comboTwoPause()
+    {
+        yield return new WaitForSeconds(2);
+        comboTwo = false;
     }
 }

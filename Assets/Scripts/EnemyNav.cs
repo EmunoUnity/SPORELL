@@ -124,6 +124,9 @@ public class EnemyNav : MonoBehaviour
         if (col.transform.tag == "Finish")
         {
             enemyLife -= 40;
+
+            
+
             if (enemyLife <= 0)
             {
                 //animator.SetBool("Dying" , true);
