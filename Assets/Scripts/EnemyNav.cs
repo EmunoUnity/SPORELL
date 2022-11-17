@@ -121,9 +121,9 @@ public class EnemyNav : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        /*if (col.transform.tag == "Bullet")
+        if (col.transform.tag == "Finish")
         {
-            enemyLife -= 10;
+            enemyLife -= 40;
             if (enemyLife <= 0)
             {
                 //animator.SetBool("Dying" , true);
@@ -134,8 +134,9 @@ public class EnemyNav : MonoBehaviour
                 chaseDistance = 0;
                 enemyDamage = 0;
                 currentRandomPoint = 0;
+                
             }
-        }*/
+        }
     }
 
     void walk()
