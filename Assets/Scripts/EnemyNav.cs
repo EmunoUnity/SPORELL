@@ -123,9 +123,20 @@ public class EnemyNav : MonoBehaviour
     {
         if (col.transform.tag == "Finish")
         {
-            enemyLife -= 40;
+            //enemyLife -= 40;
 
-            
+            if (!PlayerFighting.comboOne && !PlayerFighting.comboTwo)
+            {
+                enemyLife -= 40;
+            }
+            else if (PlayerFighting.comboOne && !PlayerFighting.comboTwo)
+            {
+                enemyLife -= 50;
+            }
+            else if (PlayerFighting.comboOne && PlayerFighting.comboTwo)
+            {
+                enemyLife -= 80;
+            }
 
             if (enemyLife <= 0)
             {
