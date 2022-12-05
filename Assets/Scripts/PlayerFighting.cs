@@ -42,14 +42,14 @@ public class PlayerFighting : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             StartCoroutine(SimulateProjectile());
         }
         
         //help.Play("SwingOne");
 
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        if(Input.GetKeyDown(KeyCode.Mouse1))
         {
             if (!comboOne && !comboTwo)
             {
@@ -89,7 +89,7 @@ public class PlayerFighting : MonoBehaviour
     IEnumerator SimulateProjectile()
     {
         // Short delay added before Projectile is thrown
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
 
         // Move projectile to the position of throwing object + add some offset if needed.
         Projectile.position = myTransform.position + new Vector3(0, 1.0f, 0);
