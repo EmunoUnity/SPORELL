@@ -7,6 +7,8 @@ public class Acorn : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject acorn;
+    public Transform Transform;
+    private GameObject Killcorn;
     void Start()
     {
         
@@ -23,12 +25,14 @@ public class Acorn : MonoBehaviour
         if(collision.gameObject.tag == "Enviroment")
         {
             Debug.Log("collided");
-            acorn = Instantiate(acorn, transform.position, transform.rotation) as GameObject;
-            acorn = Instantiate(acorn, transform.position, transform.rotation) as GameObject;
-            acorn = Instantiate(acorn, transform.position, transform.rotation) as GameObject;
-            acorn = Instantiate(acorn, transform.position, transform.rotation) as GameObject;
+            Killcorn = Instantiate(acorn, transform.position, transform.rotation) as GameObject;
+            Killcorn = Instantiate(acorn, transform.position, transform.rotation) as GameObject;
+            Killcorn = Instantiate(acorn, transform.position, transform.rotation) as GameObject;
+            Killcorn = Instantiate(acorn, transform.position, transform.rotation) as GameObject;
 
+            transform.position = transform.position;
             StartCoroutine(thenDie());
+
         }
 
         if(collision.gameObject.tag == "Enemy")
@@ -36,10 +40,11 @@ public class Acorn : MonoBehaviour
 
         }
 
-        IEnumerator thenDie()
-        {
-            yield return new WaitForSeconds(4f);
-            Destroy(acorn);
-        }
+
+    }
+    IEnumerator thenDie()
+    {
+        yield return new WaitForSeconds(7f);
+        Destroy(Killcorn);
     }
 }

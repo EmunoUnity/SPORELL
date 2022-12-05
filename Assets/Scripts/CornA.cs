@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class CornA : MonoBehaviour
 {
@@ -15,4 +16,6 @@ public class CornA : MonoBehaviour
     {
         
     }
+
+    
 }

@@ -1998,7 +1998,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1728bfdaf17a05d4a9428f5e384661d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acorn: {fileID: 0}
+  acorn: {fileID: 6318653555105011055, guid: 01871f511e6431a4b89773910704c702, type: 3}
+  Transform: {fileID: 1780924651}
 --- !u!54 &1742072576
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2076,6 +2077,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef8b7411c607a2e48b4fa1ce6ed0b15c, type: 3}
+--- !u!1 &1780924650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1780924651}
+  m_Layer: 0
+  m_Name: cococ
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1780924651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780924650}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.8519425, y: -3.1087313, z: -614.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1896470615
 GameObject:
   m_ObjectHideFlags: 0
