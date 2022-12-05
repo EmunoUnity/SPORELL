@@ -64,7 +64,7 @@ public class CharacterMovement : MonoBehaviour
 
             if (moveDirection.sqrMagnitude == 0 || isRunning)
             {
-                Debug.Log("Stopped walking");
+                //Debug.Log("Stopped walking");
 
             }
 

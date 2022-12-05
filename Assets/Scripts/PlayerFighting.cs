@@ -92,7 +92,7 @@ public class PlayerFighting : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
 
         // Move projectile to the position of throwing object + add some offset if needed.
-        Projectile.position = myTransform.position + new Vector3(0, 0.0f, 0);
+        Projectile.position = myTransform.position + new Vector3(0, 1.0f, 0);
 
         // Calculate distance to target
         float target_Distance = Vector3.Distance(Projectile.position, Target.position);

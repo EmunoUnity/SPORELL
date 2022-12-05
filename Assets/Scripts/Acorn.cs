@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 
 public class Acorn : MonoBehaviour
@@ -14,6 +15,20 @@ public class Acorn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Instantiate(acorn);
+        
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Enviroment")
+        {
+            Debug.Log("collided");
+            acorn = Instantiate(acorn, transform.position, transform.rotation) as GameObject;
+        }
+
+        if(collision.gameObject.tag == "Enemy")
+        {
+
+        }
     }
 }
