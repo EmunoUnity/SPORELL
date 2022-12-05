@@ -24,11 +24,22 @@ public class Acorn : MonoBehaviour
         {
             Debug.Log("collided");
             acorn = Instantiate(acorn, transform.position, transform.rotation) as GameObject;
+            acorn = Instantiate(acorn, transform.position, transform.rotation) as GameObject;
+            acorn = Instantiate(acorn, transform.position, transform.rotation) as GameObject;
+            acorn = Instantiate(acorn, transform.position, transform.rotation) as GameObject;
+
+            StartCoroutine(thenDie());
         }
 
         if(collision.gameObject.tag == "Enemy")
         {
 
+        }
+
+        IEnumerator thenDie()
+        {
+            yield return new WaitForSeconds(4f);
+            Destroy(acorn);
         }
     }
 }
