@@ -151,6 +151,7 @@ public class EnemyNav : MonoBehaviour
                 enemyDamage = 0;
                 currentRandomPoint = 0;
 
+                StartCoroutine(deathing());
             }
         }
 
@@ -203,7 +204,11 @@ public class EnemyNav : MonoBehaviour
         attacking = true;
     }
 
-    
 
+    IEnumerator deathing()
+    {
+        yield return new WaitForSeconds(5);
+        gameObject.SetActive(false);
+    }
     
 }

@@ -1646,6 +1646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4503c9e4d48f349925a2c1f7adc9cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  orbs: {fileID: 4714771189482066541, guid: af65cc1070b64db43824bcc692002c0e, type: 3}
 --- !u!1 &1435371676
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,7 +2013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acorn: {fileID: 6318653555105011055, guid: 01871f511e6431a4b89773910704c702, type: 3}
-  Transform: {fileID: 1780924651}
+  Trans: {fileID: 1780924651}
 --- !u!54 &1742072576
 Rigidbody:
   m_ObjectHideFlags: 0
