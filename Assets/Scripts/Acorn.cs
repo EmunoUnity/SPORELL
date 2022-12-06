@@ -24,7 +24,7 @@ public class Acorn : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enviroment")
         {
-            Debug.Log("collided");
+            
             Killcorn = Instantiate(acorn, transform.position, transform.rotation) as GameObject;
             Killcorn = Instantiate(acorn, transform.position, transform.rotation) as GameObject;
             Killcorn = Instantiate(acorn, transform.position, transform.rotation) as GameObject;

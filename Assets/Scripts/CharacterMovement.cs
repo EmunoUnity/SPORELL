@@ -58,7 +58,7 @@ public class CharacterMovement : MonoBehaviour
 
                 if (moveDirection.sqrMagnitude > 0 && !isRunning)
             {
-                Debug.Log("Is walking");
+                //Debug.Log("Is walking");
 
             }
 

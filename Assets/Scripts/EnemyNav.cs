@@ -117,6 +117,8 @@ public class EnemyNav : MonoBehaviour
             }
 
         }
+
+        
     }
 
     void OnCollisionEnter(Collision col)
@@ -148,8 +150,13 @@ public class EnemyNav : MonoBehaviour
                 chaseDistance = 0;
                 enemyDamage = 0;
                 currentRandomPoint = 0;
-                
+
             }
+        }
+
+        if (col.transform.tag == "Acorn")
+        {
+            enemyLife -= 25;
         }
     }
 
@@ -195,4 +202,8 @@ public class EnemyNav : MonoBehaviour
         navMesh.speed = 0;
         attacking = true;
     }
+
+    
+
+    
 }
