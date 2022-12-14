@@ -6,13 +6,14 @@ using UnityEngine.AI;
 public class EnemyNav : MonoBehaviour
 {
     private NavMeshAgent navMesh;
-    public Transform Player;
-    public Transform[] randomPoints;
+    private GameObject Player;
+    private int b = 0;
+    //public Transform[] randomPoints;
 
     //protected Animator animator;
 
     private float playerDist, randomPointDist;
-    public int currentRandomPoint;
+    //public int currentRandomPoint;
     private bool chasing, chaseTime, attacking;
     private float chaseStopwatch, attackingStopwatch;
 
@@ -22,20 +23,32 @@ public class EnemyNav : MonoBehaviour
     public float enemyLife;
     public float totalEnemyLife = 100;
     public string GameOverSceneName;
+
+    private Vector3 spawnPosition;
+    private Vector3 spawnPosition1;
     // Start is called before the first frame update
     void Start()
     {
         //animator = GetComponent<Animator>();
-        currentRandomPoint = Random.Range(0, randomPoints.Length);
+
+        //currentRandomPoint = Random.Range(0, randomPoints.Length);
         navMesh = transform.GetComponent<NavMeshAgent>();
         enemyLife = totalEnemyLife;
+
+        Player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+        int spawnPointX = Random.Range(-11, 11);
+        int spawnPointY = Random.Range(-11, 11);
+        spawnPosition = new Vector3(spawnPointX, spawnPointY, 0);
+        spawnPosition1 = new Vector3(spawnPointX, spawnPointY, 0);
+
         playerDist = Vector3.Distance(Player.transform.position, transform.position);
-        randomPointDist = Vector3.Distance(randomPoints[currentRandomPoint].transform.position, transform.position);
+        //randomPointDist = Vector3.Distance(randomPoints[currentRandomPoint].transform.position, transform.position);
+        randomPointDist = Vector3.Distance(spawnPosition, transform.position);
         RaycastHit hit;
 
         Vector3 startRay = transform.position;
@@ -83,7 +96,8 @@ public class EnemyNav : MonoBehaviour
 
         if (randomPointDist <= 8)
         {
-            currentRandomPoint = Random.Range(0, randomPoints.Length);
+            
+            //currentRandomPoint = Random.Range(0, randomPoints.Length);
             walk();
         }
 
@@ -149,7 +163,8 @@ public class EnemyNav : MonoBehaviour
                 chaseVelocity = 0;
                 chaseDistance = 0;
                 enemyDamage = 0;
-                currentRandomPoint = 0;
+                //currentRandomPoint = 0;
+                
 
                 StartCoroutine(deathing());
             }
@@ -163,6 +178,7 @@ public class EnemyNav : MonoBehaviour
 
     void walk()
     {
+        
 
         if (chasing == false)
         {
@@ -170,7 +186,18 @@ public class EnemyNav : MonoBehaviour
             //animator.SetBool("Attack" , false);
             navMesh.acceleration = 4;
             navMesh.speed = walkVelocity;
-            navMesh.destination = randomPoints[currentRandomPoint].position;
+
+            if (b == 0)
+            {
+                navMesh.destination = spawnPosition;
+                b = 1;
+            }
+            else
+            {
+                navMesh.destination = spawnPosition1;
+                b = 0;
+            }
+            
 
         }
         else if (chasing == true)
@@ -184,7 +211,7 @@ public class EnemyNav : MonoBehaviour
     void look()
     {
         navMesh.speed = 0;
-        transform.LookAt(Player);
+        transform.LookAt(Player.transform);
     }
 
     void chase()
@@ -193,7 +220,7 @@ public class EnemyNav : MonoBehaviour
         //animator.SetBool("Attack" , false);
         navMesh.acceleration = 8;
         navMesh.speed = chaseVelocity;
-        navMesh.destination = Player.position;
+        navMesh.destination = Player.transform.position;
     }
 
     void attack()
@@ -207,6 +234,7 @@ public class EnemyNav : MonoBehaviour
 
     IEnumerator deathing()
     {
+        Spawner.outdeed++;
         yield return new WaitForSeconds(5);
         gameObject.SetActive(false);
     }
