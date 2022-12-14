@@ -23,7 +23,7 @@ public class EnemyExp : MonoBehaviour
     {
         //deathrate = nav.enemyLife;
 
-        if (nav.enemyLife <= 0 && !stop)
+        if (nav.enemyLife <= 0 && !stop && PlayerFighting.squir)
         {
             StartCoroutine(pausing());
         }

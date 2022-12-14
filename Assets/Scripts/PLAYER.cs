@@ -25,6 +25,7 @@ public class PLAYER : MonoBehaviour
         if(HealthBar.GetHealthBarValue() <= 0 && !stopbeingstupid)
         {
             //Debug.Log("Game Over!!!");
+            PlayerFighting.squir = false;
             StartCoroutine(deathdelay());
         }
         
@@ -32,7 +33,7 @@ public class PLAYER : MonoBehaviour
 
     IEnumerator deathdelay()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
         if (!stopbeingstupid)
         {
             SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);

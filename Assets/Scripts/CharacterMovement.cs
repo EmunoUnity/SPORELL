@@ -37,7 +37,7 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!stopMovement)
+        if (PlayerFighting.squir)
         {
             float hInport = Input.GetAxis("Horizontal");
             float vInport = Input.GetAxis("Vertical");

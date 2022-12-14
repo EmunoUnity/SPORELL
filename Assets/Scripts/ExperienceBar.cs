@@ -21,7 +21,7 @@ public class ExperienceBar : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("MainSceen");
+            SceneManager.LoadScene("MainScreen");
         }
     }
 

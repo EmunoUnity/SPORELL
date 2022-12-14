@@ -23,10 +23,14 @@ public class PlayerFighting : MonoBehaviour
     private Transform myTransform;
     public Transform throwingPoint;
 
+    public static bool squir;
+
     // Start is called before the first frame update
     void Start()
     {
         //enemyNav = GetComponent<EnemyNav>();
+
+        squir = true;
 
         comboOne = false;
         comboTwo = false;
@@ -45,7 +49,7 @@ public class PlayerFighting : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyUp(KeyCode.Mouse1) && Corna.nuts > 0)
+        if (Input.GetKeyUp(KeyCode.Mouse1) && Corna.nuts > 0 && squir)
         {
             Corna.nuts -= 1;
             StartCoroutine(SimulateProjectile());
@@ -53,7 +57,7 @@ public class PlayerFighting : MonoBehaviour
         
         //help.Play("SwingOne");
 
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        if(Input.GetKeyDown(KeyCode.Mouse0) && squir)
         {
             if (!comboOne && !comboTwo)
             {
