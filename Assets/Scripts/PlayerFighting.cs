@@ -38,18 +38,19 @@ public class PlayerFighting : MonoBehaviour
         myTransform = throwingPoint;
     }
 
-    // Update is called once per frame
+    // Update is called once per frames
     void Update()
     {
 
-        if (Input.GetKeyUp(KeyCode.Mouse0))
+        if (Input.GetKeyUp(KeyCode.Mouse1) && CornA.nuts > 0)
         {
+            CornA.nuts--;
             StartCoroutine(SimulateProjectile());
         }
         
         //help.Play("SwingOne");
 
-        if(Input.GetKeyDown(KeyCode.Mouse1))
+        if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (!comboOne && !comboTwo)
             {
