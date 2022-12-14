@@ -7,9 +7,11 @@ public class CornA : MonoBehaviour
 {
     // Start is called before the first frame update
     public int nuts;
+    private bool wait;
     void Start()
     {
         nuts = 15;
+        wait = true;
     }
 
     // Update is called once per frame
@@ -21,10 +23,19 @@ public class CornA : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player" && wait)
         {
             nuts = 15;
+            HealthBar.SetHealthBarValue(1);
+            StartCoroutine(delaymore());
         }
+    }
+
+    IEnumerator delaymore()
+    {
+        wait = false;
+        yield return new WaitForSeconds(30);
+        wait = true;
     }
 
 
