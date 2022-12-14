@@ -8,13 +8,13 @@ public class PLAYER : MonoBehaviour
     // Start is called before the first frame update
     public static float life = 1f;
     public float testlife;
+    public bool stopbeingstupid;
 
     void Start()
     {
+        stopbeingstupid = false;
         testlife = life;
         HealthBar.SetHealthBarValue(1);
-        GetComponent<PlayerFighting>().enabled = true;
-        GetComponent<CharacterMovement>().enabled = true;
     }
 
     // Update is called once per frame
@@ -22,18 +22,22 @@ public class PLAYER : MonoBehaviour
     {
         HealthBar.SetHealthBarValue(life);
 
-        if(HealthBar.GetHealthBarValue() <= 0)
+        if(HealthBar.GetHealthBarValue() <= 0 && !stopbeingstupid)
         {
-            Debug.Log("Game Over!!!");
+            //Debug.Log("Game Over!!!");
             StartCoroutine(deathdelay());
-            GetComponent<PlayerFighting>().enabled = false;
-            GetComponent<CharacterMovement>().enabled = false;
         }
+        
     }
 
     IEnumerator deathdelay()
     {
-        yield return new WaitForSeconds(6);
-        SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
+        yield return new WaitForSeconds(3);
+        if (!stopbeingstupid)
+        {
+            SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
+            stopbeingstupid = true;
+        }
+        
     }
 }

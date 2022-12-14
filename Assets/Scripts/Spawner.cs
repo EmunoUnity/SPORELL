@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     // Start is called before the first frame update
-    private int wave;
+    public int wave;
     public int indeed;
     private int done;
     public int fuck;
@@ -17,6 +17,7 @@ public class Spawner : MonoBehaviour
     private GameObject bif;
     void Start()
     {
+        outdeed = 10;
         wave = 1;
         indeed = 0;
         fuck = 0;
@@ -29,6 +30,7 @@ public class Spawner : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Backspace) && indeed == 0)
         {
             indeed = 3;
+            outdeed = 0;
         }
 
         if (outdeed == indeed)
