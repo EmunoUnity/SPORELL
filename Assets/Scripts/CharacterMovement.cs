@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
@@ -19,7 +20,9 @@ public class CharacterMovement : MonoBehaviour
     public bool isGrounded;
     Rigidbody rb;
 
-    
+    private Animator hell;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,11 +30,14 @@ public class CharacterMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
 
+        hell = GameObject.Find("Squirell").GetComponent<Animator>();
+
     }
 
     void OnCollisionStay()
     {
         isGrounded = true;
+        
     }
 
     // Update is called once per frame
@@ -56,15 +62,17 @@ public class CharacterMovement : MonoBehaviour
                 isGrounded = false;
             }
 
-                if (moveDirection.sqrMagnitude > 0 && !isRunning)
+                if (moveDirection.sqrMagnitude > 0)
             {
                 //Debug.Log("Is walking");
+                hell.SetBool("walking", true);
 
             }
 
-            if (moveDirection.sqrMagnitude == 0 || isRunning)
+            if (moveDirection.sqrMagnitude == 0)
             {
                 //Debug.Log("Stopped walking");
+                hell.SetBool("walking", false);
 
             }
 

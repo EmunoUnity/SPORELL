@@ -8,7 +8,7 @@ public class PlayerFighting : MonoBehaviour
     public EnemyNav enemyNav;
     public CornA Corna;
 
-    private Animation help;
+    private Animator help;
     
 
     public static bool comboOne;
@@ -35,7 +35,7 @@ public class PlayerFighting : MonoBehaviour
         comboOne = false;
         comboTwo = false;
 
-        help = gameObject.GetComponent<Animation>();
+        help = GameObject.Find("Squirell").GetComponent<Animator>();
         Corna = FindObjectOfType<CornA>();
 
     }
@@ -59,22 +59,23 @@ public class PlayerFighting : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Mouse0) && squir)
         {
+            help.SetTrigger("attacking");
             if (!comboOne && !comboTwo)
             {
-                help.Play("SwingOne");
+                //help.Play("SwingOne");
                 comboOne = true;
                 StartCoroutine(comboOnePause());
             }
             else if (comboOne && !comboTwo)
             {
-                help.Play("SwingTwo");
+                //help.Play("SwingTwo");
                 comboTwo = true;
                 StartCoroutine(comboTwoPause());
                 
             }
             else if (comboTwo && comboOne)
             {
-                help.Play("SwingThree");
+                //help.Play("SwingThree");
                 comboOne = false;
                 comboTwo = false;
             }
