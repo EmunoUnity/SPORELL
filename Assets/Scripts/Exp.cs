@@ -40,7 +40,7 @@ public class Exp : MonoBehaviour
 
     IEnumerator delay()
     {
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.3f);
         ExperienceBar.SetEXPBarValue(currentBar);
         yield return new WaitForSeconds(1.3f);
         Destroy(gameObject);

@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour
     private int done;
     public int fuck;
     public static int outdeed;
-    
+
     public GameObject enemy;
     private GameObject eme;
     void Start()
@@ -23,23 +23,26 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        done = indeed / 3;
+        done = indeed / 2;
         if (Input.GetKeyUp(KeyCode.Backspace) && indeed == 0)
         {
-            indeed = 3;
+            indeed = 2;
         }
 
         if (outdeed == indeed)
         {
-            indeed *= 3;
+            indeed *= 2;
             wave++;
         }
 
-        if(fuck < done)
+        if (fuck < done)
         {
             eme = Instantiate(enemy, transform.position, transform.rotation) as GameObject;
+
             fuck++;
         }
-        
+
     }
 }
+
+    

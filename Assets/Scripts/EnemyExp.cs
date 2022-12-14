@@ -41,5 +41,6 @@ public class EnemyExp : MonoBehaviour
         yield return new WaitForSeconds(1f);
         stop = true;
         gain = false;
+        
     }
 }

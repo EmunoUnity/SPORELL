@@ -232,7 +232,7 @@ public class EnemyNav : MonoBehaviour
     }
 
 
-    IEnumerator deathing()
+    public IEnumerator deathing()
     {
         Spawner.outdeed++;
         yield return new WaitForSeconds(5);
