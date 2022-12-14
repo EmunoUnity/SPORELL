@@ -13,6 +13,8 @@ public class Spawner : MonoBehaviour
 
     public GameObject enemy;
     private GameObject eme;
+    public GameObject boss;
+    private GameObject bif;
     void Start()
     {
         wave = 1;
@@ -23,15 +25,15 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        done = indeed / 2;
+        done = indeed / 3;
         if (Input.GetKeyUp(KeyCode.Backspace) && indeed == 0)
         {
-            indeed = 2;
+            indeed = 3;
         }
 
         if (outdeed == indeed)
         {
-            indeed *= 2;
+            indeed *= 3;
             wave++;
         }
 
@@ -40,7 +42,14 @@ public class Spawner : MonoBehaviour
             eme = Instantiate(enemy, transform.position, transform.rotation) as GameObject;
 
             fuck++;
+
+            if (wave == 5)
+            {
+                //spawn boss
+                bif = Instantiate(boss, transform.position, transform.rotation) as GameObject;
+            }
         }
+
 
     }
 }
