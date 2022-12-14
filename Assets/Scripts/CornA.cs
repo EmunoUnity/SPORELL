@@ -6,7 +6,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class CornA : MonoBehaviour
 {
     // Start is called before the first frame update
-    public static int nuts;
+    public int nuts;
     void Start()
     {
         nuts = 15;
@@ -18,9 +18,10 @@ public class CornA : MonoBehaviour
         
     }
 
-    public void OnCollisionEnter(Collision collision)
+
+    public void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player")
         {
             nuts = 15;
         }

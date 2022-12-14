@@ -6,6 +6,7 @@ public class PlayerFighting : MonoBehaviour
 {
     public float normaldamage = 100;
     public EnemyNav enemyNav;
+    public CornA Corna;
 
     private Animation help;
     
@@ -16,6 +17,7 @@ public class PlayerFighting : MonoBehaviour
     public Transform Target;
     public float firingAngle = 45.0f;
     public float gravity = 9.8f;
+   
 
     public Transform Projectile;
     private Transform myTransform;
@@ -30,7 +32,8 @@ public class PlayerFighting : MonoBehaviour
         comboTwo = false;
 
         help = gameObject.GetComponent<Animation>();
-        
+        Corna = FindObjectOfType<CornA>();
+
     }
 
     void Awake()
@@ -41,10 +44,10 @@ public class PlayerFighting : MonoBehaviour
     // Update is called once per frames
     void Update()
     {
-
-        if (Input.GetKeyUp(KeyCode.Mouse1) && CornA.nuts > 0)
+        
+        if (Input.GetKeyUp(KeyCode.Mouse1) && Corna.nuts > 0)
         {
-            CornA.nuts--;
+            Corna.nuts -= 1;
             StartCoroutine(SimulateProjectile());
         }
         

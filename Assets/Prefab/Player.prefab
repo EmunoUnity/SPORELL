@@ -66,6 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normaldamage: 100
   enemyNav: {fileID: 0}
+  Corna: {fileID: 0}
   Target: {fileID: 4603450403256201835}
   firingAngle: 34
   gravity: 9.8
