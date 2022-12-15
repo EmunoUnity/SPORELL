@@ -45,9 +45,10 @@ public class Spawner : MonoBehaviour
 
             fuck++;
 
-            if (wave == 5)
+            if (wave == 5 || wave == 10 || wave == 15 || wave == 20)
             {
                 //spawn boss
+                bif = Instantiate(boss, transform.position, transform.rotation) as GameObject;
                 bif = Instantiate(boss, transform.position, transform.rotation) as GameObject;
             }
         }
