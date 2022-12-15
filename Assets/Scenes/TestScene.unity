@@ -256,7 +256,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1001 &340840426
+--- !u!1001 &405653495
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -269,7 +269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8051850826932625427, guid: 49950fff57e275e429f8e059a73dc53c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.88
+      value: 15.8
       objectReference: {fileID: 0}
     - target: {fileID: 8051850826932625427, guid: 49950fff57e275e429f8e059a73dc53c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -309,7 +309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8051850826932625439, guid: 49950fff57e275e429f8e059a73dc53c, type: 3}
       propertyPath: m_Name
-      value: f
+      value: Big Boss
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49950fff57e275e429f8e059a73dc53c, type: 3}

@@ -10,25 +10,25 @@ public class PLAYER : MonoBehaviour
     public float testlife;
     public bool stopbeingstupid;
 
-    private Animator hell;
+    
 
     void Start()
     {
         stopbeingstupid = false;
         testlife = life;
         HealthBar.SetHealthBarValue(1);
-        hell = GameObject.Find("Squirell").GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         HealthBar.SetHealthBarValue(life);
-
-        if(HealthBar.GetHealthBarValue() <= 0 && !stopbeingstupid)
+        
+        if (HealthBar.GetHealthBarValue() <= 0 && !stopbeingstupid)
         {
-            //Debug.Log("Game Over!!!");
-            hell.SetBool("death", true);
+            Debug.Log("Game Over!!!");
+            
             PlayerFighting.squir = false;
             StartCoroutine(deathdelay());
         }

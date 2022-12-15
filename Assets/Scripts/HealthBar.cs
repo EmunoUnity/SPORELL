@@ -9,9 +9,11 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     private static Image HealthBarImage;
     
+
     void Start()
     {
         HealthBarImage = GetComponent<Image>();
+        
     }
 
     // Update is called once per frame
@@ -23,6 +25,14 @@ public class HealthBar : MonoBehaviour
     public static void SetHealthBarValue(float value)
     {
         HealthBarImage.fillAmount = value;
+
+
+        if(value <= 0)
+        {
+            Animator kell = GameObject.Find("Squirell").GetComponent<Animator>();
+            kell.SetBool("death", true);
+
+        }
         /*if (HealthBarImage.fillAmount < 0.2f)
         {
             SetHealthBarColor(Color.red);

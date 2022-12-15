@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4603450401841740882}
   m_Layer: 0
   m_Name: GameObject (1)
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,8 +251,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.815551, y: 2, z: 0.9828398}
-  m_Center: {x: -0.1654792, y: 0, z: 1.8495172}
+  m_Size: {x: 0.4852409, y: 1.5594544, z: 0.22827244}
+  m_Center: {x: -0.19641481, y: 0.22027299, z: 1.3859932}
 --- !u!54 &4603450402995866283
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -373,8 +373,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.6909044, z: 1.5036229}
-  m_Center: {x: 0, y: 0.15454781, z: -0.09818858}
+  m_Size: {x: 1.043575, y: 1.6909044, z: 1.5036229}
+  m_Center: {x: -0.07821247, y: 0.15454781, z: -0.09818858}
 --- !u!54 &4603450403403229884
 Rigidbody:
   m_ObjectHideFlags: 0
