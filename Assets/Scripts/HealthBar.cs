@@ -24,10 +24,10 @@ public class HealthBar : MonoBehaviour
 
     public static void SetHealthBarValue(float value)
     {
+
         HealthBarImage.fillAmount = value;
 
-
-        if(value <= 0)
+        if (value <= 0)
         {
             Animator kell = GameObject.Find("Squirell").GetComponent<Animator>();
             kell.SetBool("death", true);

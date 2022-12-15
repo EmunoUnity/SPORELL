@@ -16,7 +16,7 @@ public class PLAYER : MonoBehaviour
     {
         stopbeingstupid = false;
         testlife = life;
-        HealthBar.SetHealthBarValue(1);
+        //HealthBar.SetHealthBarValue(1f);
         
     }
 

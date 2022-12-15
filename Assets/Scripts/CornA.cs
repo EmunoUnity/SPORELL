@@ -8,6 +8,7 @@ public class CornA : MonoBehaviour
     // Start is called before the first frame update
     public int nuts;
     private bool wait;
+    
     void Start()
     {
         nuts = 15;
@@ -26,7 +27,8 @@ public class CornA : MonoBehaviour
         if(other.gameObject.tag == "Player" && wait)
         {
             nuts = 15;
-            HealthBar.SetHealthBarValue(1);
+            //HealthBar.SetHealthBarValue(weird);
+            PLAYER.life = 1;
             StartCoroutine(delaymore());
         }
     }
