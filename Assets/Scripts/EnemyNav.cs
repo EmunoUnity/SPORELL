@@ -183,7 +183,7 @@ public class EnemyNav : MonoBehaviour
         if (chasing == false)
         {
             //animator.SetFloat("Speed", 0.5f);
-            //animator.SetBool("Attack" , false);
+            animator.SetBool("attack" , false);
             navMesh.acceleration = 4;
             navMesh.speed = walkVelocity;
 
@@ -203,7 +203,7 @@ public class EnemyNav : MonoBehaviour
         else if (chasing == true)
         {
             //animator.SetFloat("Speed", 0.5f);
-            //animator.SetBool("Attack" , false);
+            animator.SetBool("attack" , false);
             chaseTime = true;
         }
     }
@@ -217,7 +217,7 @@ public class EnemyNav : MonoBehaviour
     void chase()
     {
         //animator.SetFloat("Sprint", 0.4f);
-        //animator.SetBool("Attack" , false);
+        animator.SetBool("attack" , false);
         navMesh.acceleration = 8;
         navMesh.speed = chaseVelocity;
         navMesh.destination = Player.transform.position;
