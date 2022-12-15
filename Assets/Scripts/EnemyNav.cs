@@ -10,7 +10,7 @@ public class EnemyNav : MonoBehaviour
     private int b = 0;
     //public Transform[] randomPoints;
 
-    //protected Animator animator;
+    private Animator animator;
 
     private float playerDist, randomPointDist;
     //public int currentRandomPoint;
@@ -29,7 +29,7 @@ public class EnemyNav : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
 
         //currentRandomPoint = Random.Range(0, randomPoints.Length);
         navMesh = transform.GetComponent<NavMeshAgent>();
@@ -156,7 +156,7 @@ public class EnemyNav : MonoBehaviour
 
             if (enemyLife <= 0)
             {
-                //animator.SetBool("Dying" , true);
+                animator.SetBool("death",true);
                 seeingPlayer = false;
                 walkVelocity = 0;
                 attackDistance = 0;
@@ -225,7 +225,7 @@ public class EnemyNav : MonoBehaviour
 
     void attack()
     {
-        //animator.SetBool("Attack" , true);
+        animator.SetBool("attack" , true);
         navMesh.acceleration = 0;
         navMesh.speed = 0;
         attacking = true;

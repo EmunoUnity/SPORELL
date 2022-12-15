@@ -688,10 +688,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7733303460961341282, guid: c4af161df24962f418549b9117d0ab5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f3d67291dc2710b44a4000891f954191, type: 2}
+    - target: {fileID: -6627265635460366252, guid: c4af161df24962f418549b9117d0ab5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f3d67291dc2710b44a4000891f954191, type: 2}
     - target: {fileID: 919132149155446097, guid: c4af161df24962f418549b9117d0ab5d, type: 3}
       propertyPath: m_Name
       value: Squirell
       objectReference: {fileID: 0}
+    - target: {fileID: 2715401997964451294, guid: c4af161df24962f418549b9117d0ab5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f3d67291dc2710b44a4000891f954191, type: 2}
+    - target: {fileID: 4418834999246775707, guid: c4af161df24962f418549b9117d0ab5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f3d67291dc2710b44a4000891f954191, type: 2}
+    - target: {fileID: 8133901225270580312, guid: c4af161df24962f418549b9117d0ab5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f3d67291dc2710b44a4000891f954191, type: 2}
+    - target: {fileID: 8355850933822209689, guid: c4af161df24962f418549b9117d0ab5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f3d67291dc2710b44a4000891f954191, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4af161df24962f418549b9117d0ab5d, type: 3}
 --- !u!4 &5858184733250044553 stripped
