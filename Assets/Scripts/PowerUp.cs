@@ -14,13 +14,13 @@ public class PowerUp : MonoBehaviour
     void Start()
     {
         exp = FindObjectOfType<ExperienceBar>();
-        minRange = 20;
+        minRange = 70;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && ExperienceBar.bars == 1f)
+        if (Input.GetKeyDown(KeyCode.E) && ExperienceBar.bars <= 0.2f)
         {
             pain = GameObject.FindGameObjectsWithTag("Enemy");
 
@@ -34,6 +34,8 @@ public class PowerUp : MonoBehaviour
                     
                 }
             }
+
+            ExperienceBar.bars = 0f;
         }
     }
 }

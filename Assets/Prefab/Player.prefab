@@ -408,7 +408,7 @@ MonoBehaviour:
   isRunning: 0
   stopMovement: 0
   jump: {x: 0, y: 0, z: 0}
-  jumpForce: 2
+  jumpForce: 3.5
   isGrounded: 0
 --- !u!114 &4603450403403229885
 MonoBehaviour:

@@ -55,6 +55,8 @@ public class EnemyNav : MonoBehaviour
         Vector3 endRay = Player.transform.position;
         Vector3 direction = endRay - startRay;
 
+        
+
         if (Physics.Raycast(transform.position, direction, out hit, 1000) && playerDist < perceptionDistance)
         {
             if (hit.collider.gameObject.CompareTag("Player"))
@@ -154,20 +156,22 @@ public class EnemyNav : MonoBehaviour
                 enemyLife -= 80;
             }
 
-            if (enemyLife <= 0)
-            {
-                animator.SetBool("death",true);
-                seeingPlayer = false;
-                walkVelocity = 0;
-                attackDistance = 0;
-                chaseVelocity = 0;
-                chaseDistance = 0;
-                enemyDamage = 0;
-                //currentRandomPoint = 0;
-                
+            
+        }
 
-                StartCoroutine(deathing());
-            }
+        if (enemyLife <= 0)
+        {
+            animator.SetBool("death", true);
+            seeingPlayer = false;
+            walkVelocity = 0;
+            attackDistance = 0;
+            chaseVelocity = 0;
+            chaseDistance = 0;
+            enemyDamage = 0;
+            //currentRandomPoint = 0;
+
+
+            StartCoroutine(deathing());
         }
 
         if (col.transform.tag == "Acorn")
@@ -235,7 +239,7 @@ public class EnemyNav : MonoBehaviour
     public IEnumerator deathing()
     {
         Spawner.outdeed++;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         gameObject.SetActive(false);
     }
     

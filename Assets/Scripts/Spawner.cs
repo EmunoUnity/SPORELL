@@ -49,11 +49,17 @@ public class Spawner : MonoBehaviour
             {
                 //spawn boss
                 bif = Instantiate(boss, transform.position, transform.rotation) as GameObject;
-                bif = Instantiate(boss, transform.position, transform.rotation) as GameObject;
+                //bif = Instantiate(boss, transform.position, transform.rotation) as GameObject;
             }
         }
 
 
+    }
+
+    IEnumerator getenemy()
+    {
+        yield return new WaitForSeconds(30);
+        eme = Instantiate(enemy, transform.position, transform.rotation) as GameObject;
     }
 }
 

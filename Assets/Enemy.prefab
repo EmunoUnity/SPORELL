@@ -152,13 +152,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2c218810bc196d4fbf3524d0dbf4975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perceptionDistance: 15
-  chaseDistance: 20
+  perceptionDistance: 30
+  chaseDistance: 40
   attackDistance: 1
   walkVelocity: 2
   chaseVelocity: 5
   attackTime: 1.5
-  enemyDamage: 0.2
+  enemyDamage: 0.26
   seeingPlayer: 0
   enemyLife: 1
   totalEnemyLife: 100

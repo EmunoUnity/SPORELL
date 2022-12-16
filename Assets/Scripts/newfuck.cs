@@ -20,7 +20,7 @@ public class newfuck : MonoBehaviour
         }
         else if (Input.anyKey)
         {
-            SceneManager.LoadScene("SporellLevel");
+            SceneManager.LoadScene("Sporell");
         }
     }
 }

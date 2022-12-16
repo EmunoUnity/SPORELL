@@ -9,12 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScreen.unity
     guid: 1cd540b8a4ac9f442952f04ea6b7bfd5
   - enabled: 1
+    path: Assets/Scenes/HowToPlay.unity
+    guid: 2b5953a9cdef64a47a429a687783de2a
+  - enabled: 1
+    path: Assets/Scenes/Sporell.unity
+    guid: af3dffd237535d24dbac0b29b456dfe6
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 538bf9160c801304a8a2fa1cb6c34bd2
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 0f7a570168586114aa78cb5fc9061584
   - enabled: 1
     path: Assets/Scenes/TestScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: 538bf9160c801304a8a2fa1cb6c34bd2
   m_configObjects: {}

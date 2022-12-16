@@ -39,7 +39,7 @@ public class Acorn : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         transform.position = Trans.position;
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(5f);
         Destroy(Killcorn);
     }
 }
