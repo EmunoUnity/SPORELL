@@ -238,7 +238,7 @@ public class EnemyNav : MonoBehaviour
 
     public IEnumerator deathing()
     {
-        Spawner.outdeed++;
+        Spawner.outdeed = Spawner.outdeed + 1;
         yield return new WaitForSeconds(3);
         gameObject.SetActive(false);
     }

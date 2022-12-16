@@ -20,7 +20,7 @@ public class PowerUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && ExperienceBar.bars <= 0.2f)
+        if (Input.GetKeyDown(KeyCode.E) && ExperienceBar.bars <= 1f)
         {
             pain = GameObject.FindGameObjectsWithTag("Enemy");
 
