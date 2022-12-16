@@ -27,7 +27,7 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         done = indeed / 3;
-        if (Input.GetKeyUp(KeyCode.Backspace) && indeed == 0)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && indeed == 0)
         {
             indeed = 3;
             outdeed = 0;
